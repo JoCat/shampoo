@@ -1,9 +1,8 @@
 {
-  "extends": [
-    "@tsconfig/node-lts/tsconfig.json",
-    "@tsconfig/strictest/tsconfig.json"
-  ],
-  "compilerOptions": {
-    "module": "ES2022"
-  }
+  // "extends": [
+  //   "@tsconfig/node-lts/tsconfig.json",
+  //   "@tsconfig/strictest/tsconfig.json"
+  // ],
+  // Ёбаный ts-node
+  "extends": "@tsconfig/node-lts/tsconfig.json"
 }
