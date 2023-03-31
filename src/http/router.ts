@@ -1,2 +1,2 @@
 import "./requests/index";
-import "./requests/currentTrack";
+import "./requests/tracks";
