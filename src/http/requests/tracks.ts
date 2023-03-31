@@ -4,7 +4,7 @@ import { parseBody } from "../middlewares/parseBody";
 import { router } from "../server";
 
 // @dep
-router.get("/currentTrack", tracksList.getLastTrack);
+router.get("/currentTrack", () => tracksList.getLastTrack());
 
 // @dep
 router.post("/currentTrack", async (req) => {
@@ -19,13 +19,11 @@ router.post("/currentTrack", async (req) => {
   };
 
   tracksList.addTrack(track);
-
-  // TODO Send new track info to ws clients
 });
 
-router.get("/tracks", tracksList.getTracks);
+router.get("/tracks", () => tracksList.getTracks());
 
-router.get("/tracks/current", tracksList.getLastTrack);
+router.get("/tracks/current", () => tracksList.getLastTrack());
 
 router.post("/tracks/current", async (req) => {
   checkAuthToken(req);
