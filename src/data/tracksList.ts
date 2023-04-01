@@ -9,18 +9,18 @@ export class TracksList {
 
   addTrack(track: Track) {
     if (this.#tracks.length === 11) {
-      this.#tracks.shift();
+      this.#tracks.pop();
     }
 
-    this.#tracks.push(track);
+    this.#tracks.unshift(track);
   }
 
   getTracks() {
-    return this.#tracks.slice(0, 10);
+    return this.#tracks.slice(1);
   }
 
   getLastTrack() {
-    return this.#tracks.at(-1);
+    return this.#tracks[0];
   }
 }
 
