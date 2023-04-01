@@ -3,7 +3,7 @@ export class ResponseData {
   code: number;
 
   constructor(data: any) {
-    this.data = data ?? true;
+    this.data = data !== undefined ? data : true;
     this.code = 200;
   }
 

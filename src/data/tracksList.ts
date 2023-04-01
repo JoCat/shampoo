@@ -20,7 +20,7 @@ export class TracksList {
   }
 
   getLastTrack() {
-    return this.#tracks[0];
+    return this.#tracks[0] || null;
   }
 }
 
