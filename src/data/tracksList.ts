@@ -8,7 +8,7 @@ export class TracksList {
   #tracks: Track[] = [];
 
   addTrack(track: Track) {
-    if (this.#tracks.length === 10) {
+    if (this.#tracks.length === 11) {
       this.#tracks.shift();
     }
 
@@ -16,7 +16,7 @@ export class TracksList {
   }
 
   getTracks() {
-    return this.#tracks;
+    return this.#tracks.slice(0, 10);
   }
 
   getLastTrack() {
